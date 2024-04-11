@@ -1,0 +1,19 @@
+﻿@using PetStore.Domain.Entities;
+@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@foreach (var p in Model)
+            {
+                <div>
+                    <h1>@p.ProductID @p.ProductName</h1>
+                    <h2>Pet: @p.Pet</h2>
+                    <p>@p.Description</p>
+                    <h2>Category: @p.Category</h2>
+                    <h2>Price: @p.Price.ToString("c")</h2>
+                </div>
+            }
